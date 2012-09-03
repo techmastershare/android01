@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">DuyNT_TodoList</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_todo_list">DuyNT_TodoList</string>
+    <!-- image button describle -->
+    <string name="add">Add note</string>
+    <string name="select">Select note</string>
+    <string name="delete">Delete note</string>
+    <string name="edit">Edit note</string>
+    <string name="message">Count note</string>
+    <string name="instruction">Select new avater and press save button !!!</string>
+    <!-- end image button describle -->
+
+</resources>

@@ -1,0 +1,10 @@
+1.Work 	:
++ Finish implement TodoList with ListView : 
+	- add new note
+	- edit one note when select and press edit button
+	- multi-select item when press multi-select button
+	- delete multi selected note
+	- change avatar of note when press in note 's image
+	- save notes after quit apps
++ Finish imlement image slide by Gallery
+	- emdbed in change avatar of a note
