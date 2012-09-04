@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+    
+	<CheckBox 
+	    android:id="@+id/chek_task"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text=""
+	    android:paddingTop="20dp"
+	    android:paddingRight="5dp"/>
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+	    
+	    <TextView 
+	        android:id="@+id/task_name_textView"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="30dp"
+	        android:lines="1"
+	        android:textColor="#000"
+	        android:text="@string/task_name"/>
+	    
+	    <TextView
+		        android:id="@+id/create_time_textView"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textSize="12dp"
+		        android:lines="1"
+		        android:text="@string/create_time"
+		        android:textStyle="italic"
+		        android:textColor="@color/create_time_color"/>
+	    
+	    <TextView 
+	        android:id="@+id/status_textView"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/status"
+	        android:textColor="@color/status_color"/>
+	    
+	</LinearLayout>
+</LinearLayout>
