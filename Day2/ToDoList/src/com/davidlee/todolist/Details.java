@@ -2,18 +2,18 @@ package com.davidlee.todolist;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import com.davidlee.common.TaskEntity;
 
 public class Details extends Activity {
 	
@@ -28,6 +28,7 @@ public class Details extends Activity {
 	
 	ArrayList<TaskEntity> arrayListTask;
 	private String type;
+	private int idItemSelected = -1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,19 +53,40 @@ public class Details extends Activity {
 		if (intent != null) {
 			Bundle extras = intent.getExtras();
 			type = intent.getStringExtra("type");
+			String id = intent.getStringExtra("value");
+			if (id != null)
+				idItemSelected = Integer.parseInt(id.toString());
 			arrayListTask = new ArrayList<TaskEntity>();
 			arrayListTask = extras.getParcelableArrayList("send");
+		}
+		
+		if (type.equals("add")) { //Create
+			btnCreate.setText("Create");
+		}
+		else { //Edit
+			btnCreate.setText("Update");
+			TaskEntity task = arrayListTask.get(idItemSelected);
+			edtTitle.setText(task.getTitle());
+			edtCreatedDate.setText(task.getCreatedDate());
+			if (rdbWorking.getText().equals(task.getStatus())){
+				rdbWorking.setChecked(true);
+			}
+			else if (rdbPending.getText().equals(task.getStatus())) {
+				rdbPending.setChecked(true);
+			}
+			else 
+				rdbCompleted.setChecked(true);
 		}
 		
 		btnCreate.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
 				if (v.getId() == R.id.btnCreate) {
+					
+					int id = rdbGroup.getCheckedRadioButtonId();
+					RadioButton rdbChecked = (RadioButton) findViewById(id);
+					
 					if (type.toString().equals("add")) {
-						
-						int id = rdbGroup.getCheckedRadioButtonId();
-						RadioButton rdbChecked = (RadioButton) findViewById(id);
-						
 						TaskEntity task = new TaskEntity();
 						task.setTitle(edtTitle.getText().toString());
 						task.setCreatedDate(edtCreatedDate.getText().toString());
@@ -74,15 +96,20 @@ public class Details extends Activity {
 						arrayListTask.add(task);
 						
 						//Hien thong bao
-						Toast.makeText(getApplicationContext(), "A new task created", Toast.LENGTH_SHORT).show();
-						Intent i = new Intent(getApplicationContext(), MainActivity.class);
-						Bundle b = new Bundle();
-						b.putParcelableArrayList("result", arrayListTask);
-						//i.putExtra("type", false);
-						i.putExtras(b);
-						startActivity(i);
-							
-					}//type
+						Toast.makeText(getApplicationContext(), "A new task created", Toast.LENGTH_SHORT).show();							
+					}
+					else //Update
+					{
+						arrayListTask.get(idItemSelected).setTitle(edtTitle.getText().toString());
+						arrayListTask.get(idItemSelected).setCreatedDate(edtCreatedDate.getText().toString());
+						arrayListTask.get(idItemSelected).setStatus(rdbChecked.getText().toString());
+						Toast.makeText(getApplicationContext(), "A task updated", Toast.LENGTH_SHORT).show();
+					}
+					Intent i = new Intent(getApplicationContext(), TodoList.class);
+					Bundle b = new Bundle();
+					b.putParcelableArrayList("result", arrayListTask);
+					i.putExtras(b);
+					startActivity(i);
 				}//btnCreated
 			}
 		});

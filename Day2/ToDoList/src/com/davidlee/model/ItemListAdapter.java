@@ -1,4 +1,4 @@
-package com.davidlee.todolist;
+package com.davidlee.model;
 
 import java.util.ArrayList;
 
@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.davidlee.common.TaskEntity;
+import com.davidlee.todolist.R;
 
 public class ItemListAdapter extends BaseAdapter {
 	
