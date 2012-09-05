@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="app_name">TodoList</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_todo_list">Todo List</string>
+    <string name="task_name">Task name</string>
+    <string name="create_time">Create time</string>
+    <string name="status">Status</string>
+    <string name="task_hint">Enter task name here</string>
+    <string name="status_textView">Status</string>
+    <string name="deadline_textView">Deadline</string>
+    <string name="create_date_textView">Ccreate date</string>
+    <string name="working_radio_button">Working</string>
+    <string name="pending_radio_button">Pending</string>
+    <string name="completed_radio_button">Completed</string>
+    <string name="add_button">add new</string>
+    <string name="delete_button">delete</string>
+
+
+</resources>

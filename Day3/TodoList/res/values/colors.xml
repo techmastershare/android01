@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="task_name_color">#000000</color>
+    <color name="create_time_color">#cccccc</color>
+    <color name="status_color">#FF0000</color>
+    <color name="hint_color">#cccccc</color>
+    
+</resources>
