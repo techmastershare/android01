@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">TodoList</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">TodoList</string>
+    <string name="add_button">Add</string>
+	<string name="edit_button">Edit</string>
+	<string name="del_button">Del</string>
+	<string name="save_button">Save</string>
+	<string name="cancel_button">Cancel</string>
+	<string name="text_view_note_title">Title</string>
+	<string name="text_view_note_detail">Detail</string>
+	<string name="text_view_note_status">Status</string>
+	<string name="text_view_note_deadline">Deadline</string>
+	<string name="success">Success</string>
+	<string name="unsuccess">Unsuccess</string>
+</resources>
