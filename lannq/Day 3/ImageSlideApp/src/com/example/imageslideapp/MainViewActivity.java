@@ -3,6 +3,8 @@ package com.example.imageslideapp;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.devsmart.android.ui.HorizontalListView;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -10,7 +12,7 @@ import android.widget.Gallery;
 
 public class MainViewActivity extends Activity {
 
-	private Gallery mListImageListView = null;
+	private HorizontalListView mListImageListView = null;
 	private ArrayList<ListImageItem> mListImage = null;
 	private ImagesAdapter mImagesAdapter = null;
 
@@ -19,7 +21,7 @@ public class MainViewActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		mListImageListView = (Gallery) findViewById(R.id.horizontalListView);
+		mListImageListView = (HorizontalListView) findViewById(R.id.listview);
 
 		mListImage = new ArrayList<ListImageItem>();
 		for (int i = 1; i < 15; i++) {
