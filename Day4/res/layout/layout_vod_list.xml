@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/page_bg" >
+
+    <TextView
+        android:id="@+id/tvCatelogyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/phim_hanh_dong"
+        android:textColor="#FFF"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/list_vod"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="@color/page_bg"
+        android:cacheColorHint="#0000" >
+        <!-- setting as a transparent color -->
+    </ListView>
+
+</LinearLayout>

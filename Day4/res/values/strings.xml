@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">ScrollView</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    
+    <string name="hot_content">HOT CONTENT</string>
+    <string name="new_content">NEW CONTENT</string>
+    
+    <string name="phim_hanh_dong">Phim hành động</string>
+    <string name="phim_kinh_di">Phim kinh dị</string>
+    <string name="phim_vien_tuong">Phim viễn tưởng</string>
+    <string name="phim_tam_ly">Phim tâm lý</string>
+    <string name="phim_vo_thuat">Phim võ thuật</string>
+
+</resources>
