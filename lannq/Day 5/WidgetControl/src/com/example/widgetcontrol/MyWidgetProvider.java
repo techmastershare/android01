@@ -15,12 +15,13 @@ import android.widget.RemoteViews;
 public class MyWidgetProvider extends AppWidgetProvider {
 	@Override
 	public void onReceive(Context ctxt, Intent intent) {
-		if (intent.getAction() == null || intent.getAction() == "update_sound" || intent.getAction() == "update_wifi"){
+		if (intent.getAction() == null
+				|| intent.getAction().equalsIgnoreCase("update_sound")
+				|| intent.getAction().equalsIgnoreCase("update_wifi")) {
 			Intent i = new Intent(ctxt, ToggleService.class);
 			i.setAction(intent.getAction());
 			ctxt.startService(i);
-		}
-		else
+		} else
 			super.onReceive(ctxt, intent);
 	}
 
@@ -48,7 +49,8 @@ public class MyWidgetProvider extends AppWidgetProvider {
 			RemoteViews updateViews = new RemoteViews(context.getPackageName(),
 					R.layout.widget);
 
-			if (intent.getAction() == "update_sound") {
+			if (intent.getAction() != null
+					&& intent.getAction().equalsIgnoreCase("update_sound")) {
 				AudioManager audioManager = (AudioManager) context
 						.getSystemService(Activity.AUDIO_SERVICE);
 				if (audioManager.getRingerMode() == AudioManager.RINGER_MODE_SILENT) {
@@ -61,13 +63,17 @@ public class MyWidgetProvider extends AppWidgetProvider {
 					audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
 				}
 			}
-			if (intent.getAction() == "update_wifi") {
-				WifiManager wifiManager = (WifiManager) context.getSystemService(Activity.WIFI_SERVICE);
+			if (intent.getAction() != null
+					&& intent.getAction().equalsIgnoreCase("update_wifi")) {
+				WifiManager wifiManager = (WifiManager) context
+						.getSystemService(Activity.WIFI_SERVICE);
 				if (wifiManager.isWifiEnabled()) {
-					updateViews.setImageViewResource(R.id.wifi_switcher_button, R.drawable.wifi_off);
+					updateViews.setImageViewResource(R.id.wifi_switcher_button,
+							R.drawable.wifi_off);
 					wifiManager.setWifiEnabled(false);
 				} else {
-					updateViews.setImageViewResource(R.id.wifi_switcher_button, R.drawable.wifi_on);
+					updateViews.setImageViewResource(R.id.wifi_switcher_button,
+							R.drawable.wifi_on);
 					wifiManager.setWifiEnabled(true);
 				}
 			}
@@ -76,7 +82,7 @@ public class MyWidgetProvider extends AppWidgetProvider {
 			i.setAction("update_sound");
 			PendingIntent pi = PendingIntent.getBroadcast(context, 0, i, 0);
 			updateViews.setOnClickPendingIntent(R.id.sound_switcher_button, pi);
-			
+
 			Intent i2 = new Intent(this, MyWidgetProvider.class);
 			i2.setAction("update_wifi");
 			PendingIntent pi2 = PendingIntent.getBroadcast(context, 0, i2, 0);
