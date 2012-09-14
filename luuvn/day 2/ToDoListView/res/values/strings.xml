@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">To Do List View</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">To Do List View</string>
+    <string name="work_hint">Enter work here</string>
+    <string name="hour_edit">Hour</string>
+    <string name="hour_edit_time">12</string>
+    <string name="minute_edit">Minute</string>
+    <string name="minute_edit_time">00</string>
+    <string name="button_content">Add Work</string>
+
+</resources>

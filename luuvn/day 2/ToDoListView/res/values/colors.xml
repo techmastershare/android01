@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="work_view">#0000FF</color>
+    <color name="hour_view">#FF0000</color>
+    <color name="hint_color">#cccccc</color>
+    <color name="hour_edit">#000000</color>
+    <color name="minute_edit">#000000</color>
+
+</resources>
