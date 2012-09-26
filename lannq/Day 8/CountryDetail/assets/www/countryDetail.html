@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Country Detail</title>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<style type="text/css">
+.block {
+	float: left;
+	display: block;
+	width: 50%;
+	text-align: center;
+}
+
+.country {
+	display: block;
+}
+
+h2 {
+	font-weight: 800;
+	color: purple;
+}
+
+h3 {
+	text-decoration: underline;
+}
+
+body {
+	background: #000000;
+	color: #FFFFFF;
+}
+
+h2 span,h3 span {
+	text-decoration: none;
+}
+</style>
+
+<script type="text/javascript">
+	function countryUpdate(name) {
+		name = name.replace(/\s/g, "");
+		name = name.toLowerCase();
+		$('.country.' + name).show();
+		$('.country .block img').attr("src", "images/" + name + ".jpg");
+	}
+
+	$(document).ready(function() {
+		JSInterface.updateCountry();
+	});
+</script>
+</head>
+<body>
+
+	<div class="country vietnam" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">Viet Nam</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Asia</span>
+			</h3>
+			<h3>
+				Size: <span id="size">331,210 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">91,519,289</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+	<div class="country japan" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">Japan</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Asia</span>
+			</h3>
+			<h3>
+				Size: <span id="size">377,944 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">126,659,683</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+	<div class="country india" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">India</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Asia</span>
+			</h3>
+			<h3>
+				Size: <span id="size">3,287,263 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">1,210,193,422</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+
+	<div class="country korea" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">Korea</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Asia</span>
+			</h3>
+			<h3>
+				Size: <span id="size">219,140 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">73,000,000[</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+
+	<div class="country singapore" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">Singapore</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Asia</span>
+			</h3>
+			<h3>
+				Size: <span id="size">710 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">5,183,700</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+	<div class="country england" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">England</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Europe</span>
+			</h3>
+			<h3>
+				Size: <span id="size">130,395 km2 </span>
+			</h3>
+			<h3>
+				Population: <span id="population">53,013,000</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+	<div class="country spain" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">Spain</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Europe</span>
+			</h3>
+			<h3>
+				Size: <span id="size">505,992 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">47,190,493</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+	<div class="country italy" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">Italy</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Europe</span>
+			</h3>
+			<h3>
+				Size: <span id="size">301,338 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">60,813,326</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+	<div class="country germany" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">Germany</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Europe</span>
+			</h3>
+			<h3>
+				Size: <span id="size">357,021 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">81,799,600</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+	<div class="country france" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">France</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Europe</span>
+			</h3>
+			<h3>
+				Size: <span id="size">674,843 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">65,350,000</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+	<div class="country southafrica" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">South Africa</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Africa</span>
+			</h3>
+			<h3>
+				Size: <span id="size">1,221,037 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">48,810,427</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+	<div class="country cameroon" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">Cameroon</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Africa</span>
+			</h3>
+			<h3>
+				Size: <span id="size">475,442 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">20,129,878</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+	<div class="country togo" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">Togo</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Africa</span>
+			</h3>
+			<h3>
+				Size: <span id="size">56,785 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">6,619,000</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+	<div class="country algeria" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">Algeria</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Africa</span>
+			</h3>
+			<h3>
+				Size: <span id="size">2,381,741 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">37,100,000</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+	<div class="country nigeria" style="display: none">
+		<div class="block">
+			<h2>
+				<span id="countryName">Nigeria</span>
+			</h2>
+			<h3>
+				Region: <span id="region">Africa</span>
+			</h3>
+			<h3>
+				Size: <span id="size">923,768 km2</span>
+			</h3>
+			<h3>
+				Population: <span id="population">170,123,740</span>
+			</h3>
+		</div>
+		<div class="block">
+			<img alt="Country Flag" src="images/ic_launcher.png">
+		</div>
+	</div>
+
+</body>
+</html>
