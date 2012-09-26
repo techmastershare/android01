@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">CountryDetail</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Country Detail</string>
+    <string name="country">Countries</string>
+    <string name="asia">Asia</string>
+    <string name="euro">Europe</string>
+    <string name="america">America</string>
+    <string name="africa">Africa</string>
+
+</resources>
