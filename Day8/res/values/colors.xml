@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<color name="white">#FFF</color>
+	<color name="l_blue">#00A6E2</color>
+	<color name="d_blue">#6D7B92</color>
+	<color name="gray">#CCCCCC</color>
+	<color name="text_color">#BFBFBF</color>
+	<color name="black">#000</color>
+	<color name="page_bg">#414345</color>
+	<color name="actionmenu_bg">#264969</color>
+	<color name="tab_bg">#3C709F</color>
+	<color name="name_color">#FF8800</color>
+
+	<!-- Color Vod Detail -->
+	<color name="title">#FFFF00</color>
+	<color name="button_play_bg">#FC7D00</color>
+	<color name="button_buy_bg">#269B00</color>
+	<color name="button_bg">#0068B3</color>
+	<color name="button_section_bg">#151414</color>
+
+</resources>

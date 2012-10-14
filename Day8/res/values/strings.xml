@@ -5,6 +5,19 @@
 	<string name="hello_world">Hello world!</string>
 	<string name="menu_settings">Settings</string>
 	<string name="title_activity_main">Introduction Country</string>
-	<string name="chau_my">Châu Mỹ</string>
-
+	<string name="continent_name">CHÂU LỤC</string>
+	<string name="category_name">CHÂU MỸ</string>
+	
+	<!-- Country -->
+	<string name="country_name">Tên quốc gia </string>
+	<string name="area">Diện tích: </string>
+	<string name="area_text">42,549,000 km2</string>
+	<string name="population">Dân số: </string>
+	<string name="population_text">910,720,588</string>
+	<string name="capital">Thủ đô: </string>
+	<string name="capital_text">Washington</string>
+	
+	<!-- Search -->
+	<string name="search_text_hint">Nhập tên quốc gia cần tìm</string>
+	<string name="search_button">Tìm kiếm</string>
 </resources>

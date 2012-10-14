@@ -19,13 +19,13 @@ public class MainActivity extends TabActivity {
 
 		// Tab for Continent Category
 		TabSpec categorySpec = tabHost.newTabSpec("tab1");
-		categorySpec.setIndicator("Continent Category");
-		Intent categoryIntent = new Intent(this, ContinentCategoryActivity.class);
+		categorySpec.setIndicator("Châu lục");
+		Intent categoryIntent = new Intent(this, ContinentActivity.class);
 		categorySpec.setContent(categoryIntent);
 
 		// Tab for Search
 		TabSpec searchSpec = tabHost.newTabSpec("tab2");
-		searchSpec.setIndicator("Search");
+		searchSpec.setIndicator("Tìm kiếm");
 		Intent searchIntent = new Intent(this, SearchActivity.class);
 		searchSpec.setContent(searchIntent);
 

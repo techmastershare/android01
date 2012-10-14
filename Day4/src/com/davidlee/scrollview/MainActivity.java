@@ -61,13 +61,11 @@ public class MainActivity extends Activity {
 		
 		hotcontentListView.setOnItemSelectedListener(new OnItemSelectedListener() {
 
-			@Override
 			public void onItemSelected(AdapterView<?> adapter, View v,
 					int position, long id) {
 				Toast.makeText(getApplicationContext(), "Image "+ (int)(position+1) + " selected", Toast.LENGTH_SHORT).show();
 			}
 
-			@Override
 			public void onNothingSelected(AdapterView<?> arg0) {
 				// TODO Auto-generated method stub
 				
@@ -76,7 +74,6 @@ public class MainActivity extends Activity {
 		
 		categoryListView.setOnItemClickListener(new OnItemClickListener() {
 
-			@Override
 			public void onItemClick(AdapterView<?> a, View v, int position,
 					long id) {
 				Object obj = categoryListView.getItemAtPosition(position);

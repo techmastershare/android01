@@ -1,78 +1,74 @@
 package com.davidlee.country.adapters;
 
+import com.davidlee.country.activities.R;
 import com.davidlee.country.common.ItemList;
 import com.davidlee.country.models.ItemListModel;
-import com.davidlee.country.views.ContinentItemView;
-import android.app.Activity;
+
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 public class ContinentListAdapter extends BaseAdapter {
 
-	private Activity mActivity = null;
+	private Context mContext = null;
+	private LayoutInflater mLayoutInflater = null; 
 	private ItemListModel mItemListModel = null;
-
-	private Callback mCallback = null;
-
-	public interface Callback {
-		public void onItemClicked(ItemList itemList);
-	}
-
-	public void setCallback(Callback callback) {
-		this.mCallback = callback;
-	}
 	
+	public ContinentListAdapter(final Context context) {
+		this.mContext = context;
+		this.mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	}
+
 	public ItemListModel getItemListModel() {
 		return mItemListModel;
 	}
-	
+
 	public void setItemListModel(ItemListModel itemListModel) {
 		this.mItemListModel = itemListModel;
 	}
 
-	@Override
 	public int getCount() {
 		if (mItemListModel == null)
 			return 0;
 		return mItemListModel.count();
 	}
 
-	@Override
 	public Object getItem(int position) {
 		if (mItemListModel == null)
 			return null;
 		return mItemListModel.get(position);
 	}
 
-	@Override
 	public long getItemId(int position) {
 		return position;
 	}
 
-	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 
-		ContinentItemView view = (ContinentItemView) convertView;
-		ItemList item = mItemListModel.get(position);
+		ViewHolder viewHolder;
 		
 		if (convertView == null) {
-			view = new ContinentItemView(this.mActivity, null);
-			view.setCallback(new ContinentItemView.Callback() {
-
-				@Override
-				public void onItemClicked(ItemList itemList) {
-					if (mCallback != null) {
-						mCallback.onItemClicked(itemList);
-					}
-				}
-				
-			});
+			convertView = mLayoutInflater.inflate(R.layout.continent_item_view, null);
+			viewHolder = new ViewHolder();
+			
+			viewHolder.mTextView = (TextView) convertView.findViewById(R.id.name);
+			convertView.setTag(viewHolder);
+		} else {
+			viewHolder = (ViewHolder) convertView.getTag();
 		}
 		
-		view.setItemList(item);
-		view.updateView();
+		ItemList item = mItemListModel.get(position);
+		if (item != null) {
+			viewHolder.mTextView.setText(item.getName());
+		}
 		
-		return null;
+		return convertView;
+	}
+	
+	static class ViewHolder {
+		TextView mTextView;
 	}
 }
